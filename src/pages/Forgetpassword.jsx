@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from '@/components/ui/button';
+import  { Input } from "@/components/ui/input";
 import ch from "../assets/ch.png";
 import { BriefcaseBusiness, Building2 } from "lucide-react";
 export default function Forgetpassword() {
@@ -40,14 +41,14 @@ export default function Forgetpassword() {
 
             </div>
 
-            <input
+            <Input
                 type="email"
                 placeholder="Email Address"
-                className="border border-slate-200 rounded-md w-full p-2 mb-4 bg-white text-black placeholder:text-gray-400"/>
+                className=" p-2 "/>
 
 
             
-            <Button
+            <Button 
                 onClick={() => navigate("/Resetpassword")}
               variant="custom" >
                 Reset Password
@@ -104,11 +105,11 @@ export default function Forgetpassword() {
      
         <div className="absolute bottom-48 left-25 text-white z-10">
 
-            <h1 className="text-4xl font-Samibold">
+            <h1 className="text-4xl font-semibold">
               Over 1,75,324 candidates
             </h1>
 
-            <p className="text-4xl mt-3 font-samibold">
+            <p className="text-4xl mt-3 font-semibold">
                 waiting for good employees.
             </p>
 

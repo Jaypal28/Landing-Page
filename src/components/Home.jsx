@@ -1,8 +1,24 @@
 import {BriefcaseBusiness,Building,Users,Search,MapPin,TextCursorInput} from 'lucide-react';
 import { Button } from "@/components/ui/button";
-
+import { Input } from "@/components/ui/input"
 import backgroundImage from '../assets/image.png';
 import {Link} from 'react-router-dom';
+import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
+import {
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuItem,
+  NavigationMenuLink,
+} from "@/components/ui/navigation-menu";
+
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 
 
 
@@ -32,14 +48,68 @@ export default function Home() {
             <span className="text-xl font-bold tracking-tight text-white font-display">Job Portal</span>
           </div>
 
-          {/* Navigation links */}
-          <nav className="hidden md:flex items-center gap-8">
-            <Link to="#" className="text-sm font-semibold text-white   border-b-2 border-teal-400 pb-1">Home</Link>
-           <Link t0="#" className="text-sm font-medium text-gray-400 hover:text-white  ">Jobs</Link>
-         
-            <Link to="#" className="text-sm font-medium text-gray-400 hover:text-white  ">About Us</Link>
-            <Link to="#" className="text-sm font-medium text-gray-400 hover:text-white ">Contact Us</Link>
-          </nav>
+          {/* Navigation links*/}
+         {/* <nav className="">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      
+
+        
+        <ul className="hidden md:flex items-center gap-8 font-medium">
+          <li>
+            <Link to="#" className="hover:text-blue-600 transition">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" className="hover:text-blue-600 transition">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/services" className="hover:text-blue-600 transition">
+              Services
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className="hover:text-blue-600 transition">
+              Contact Us
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </nav> */}
+
+    <div  >
+      <NavigationMenu>
+        <NavigationMenuList>
+          <NavigationMenuItem>
+            <NavigationMenuLink asChild >
+              <Link to="/" className='px-12 hover:bg-teal-600 '>Home</Link>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem>
+            <NavigationMenuLink asChild>
+              <Link to="/about" className='px-12 hover:bg-teal-600'>About</Link>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem>
+            <NavigationMenuLink asChild>
+              <Link to="/services" className=' px-12 hover:bg-teal-600'>Services</Link>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem>
+            <NavigationMenuLink asChild>
+              <Link to="/contact" className='px-12 hover:bg-teal-600'>Contact Us</Link>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </NavigationMenu>
+    </div>
+   
+
 
           
           <div className="flex items-center gap-5">
@@ -73,21 +143,24 @@ export default function Home() {
         </p>
 
         
-        <form  className="mt-9  w-full max-w-4xl bg-gray-400 md:bg-white/5 p-2.5 rounded-2xl md:rounded-7xl sm:rounded-full  border border-white flex flex-col md:flex-row items-center gap-2 ">         
+        <form  className="mt-9  w-full max-w-4xl bg-gray-400 rounded-2xl md:bg-white/5  
+        md:rounded-2xl sm:rounded-2xl  border border-white flex flex-col md:flex-row items-center gap-2 ">         
           <div className="w-full md:flex-1 sm:flex-2 flex items-center px-4 py-2 border-b border-white/10 md:border-b-0  border-gray-100">
             <Search />
-            <input
+            {/* <input
               type="text"
               name="jobQuery"
               placeholder="Job Title or Company"
               className="w-full bg-transparent text-white placeholder-gray-500 font-medium  text-sm py-1"
-            />
+            /> */}
+            <Input type="text" 
+             style={{border:"none"}}/>
           </div>
 
           {/* Select Location Dropdown (Native HTML Select) */}
           <div className="relative w-full md:w-56 flex items-center px-4 py-2 border-b border-white/10   border-gray-100 ">
             <MapPin />
-            <select 
+            {/* <select 
               className="w-full  text-white md:text-gray-400 font-medium  text-sm py-1   pr-6"
             >Select Location
               <option value="Select Location" >Select Location</option>
@@ -98,8 +171,24 @@ export default function Home() {
                       <option className="  bg-gray-300 md:bg-blue-500 text-black text-white md:text-gray-800">Kanpur</option>
                         <option className="  bg-gray-300 md:bg-blue-500 text-black text-white md:text-gray-800">Siddharth Nagar</option>
              
-            </select>
-            <div className="absolute right-4 ">
+            </select> */}
+
+            <Select>
+  <SelectTrigger className="w-[180px] border-none">
+    <SelectValue placeholder="Select Location" />
+  </SelectTrigger>
+  <SelectContent>
+    <SelectGroup>
+      <SelectItem value="Mum">Mumbhai</SelectItem>
+      <SelectItem value="Luck">Lucknow</SelectItem>
+      <SelectItem value="Kanpur">Kanpur</SelectItem>
+      <SelectItem value="Pune">Pune</SelectItem>
+      <SelectItem value="Channani">Channani</SelectItem>
+      <SelectItem value="Gujrat">Gujrat</SelectItem>
+    </SelectGroup>
+  </SelectContent>
+</Select>
+            <div className="absolute right-4  ">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-400">
                 <path d="m6 9 6 6 6-6"/>
               </svg>
@@ -109,7 +198,7 @@ export default function Home() {
          
           <div className="relative w-full md:w-60 flex items-center px-4 py-2 cursor-pointer">
             <TextCursorInput />
-            <select  className="w-full  text-white md:text-gray-400 font-medium text-sm py-1 cursor-pointer pr-6"
+            {/* <select  className="w-full  text-white md:text-gray-400 font-medium text-sm py-1 cursor-pointer pr-6"
             >Select Category
               <option value="Select Category" >Select Category</option>
             
@@ -120,7 +209,23 @@ export default function Home() {
                     <option className="bg-gray-300 md:bg-white text-white md:text-gray-800">Full Stack Development</option>
                      <option className="bg-gray-300 md:bg-white text-white md:text-gray-800">UI development</option>
              
-            </select>
+            </select> */}
+           <Select>
+  <SelectTrigger className="w-45 border-none">
+    <SelectValue placeholder="Select Categery" />
+  </SelectTrigger>
+  <SelectContent>
+    <SelectGroup>
+      <SelectItem value="Soft">Software-Development</SelectItem>
+      <SelectItem value="Web">Web-Development</SelectItem>
+      <SelectItem value="Front">Front-End Development</SelectItem>
+      <SelectItem value="Back">Back-End Development </SelectItem>
+      <SelectItem value="Full">Full Stack DevelopmentBack-end Development</SelectItem>
+      <SelectItem value="UI">UI Development</SelectItem>
+    </SelectGroup>
+  </SelectContent>
+</Select>
+
             <div className="absolute right-4 ">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-400">
                 <path d="m6 9 6 6 6-6"/>
@@ -139,17 +244,17 @@ export default function Home() {
             </svg>
             <span>Search Job</span>
           </button> */}
-          <Button className="size-12 w-30  " > <Search/>
+            <Button className=" size-16 w-30 rounded-l-none rounded-r-2xl " > <Search/>
             <span>Search Job</span></Button>
-        </form>
-
+        
+        </form> 
+         
         {/* Stats Section */}
-        <div className="mt-40 flex flex-cols-1 sm:flex-row-1 gap-8   max-w-xl  w-full">
+        <div className="mt-30 flex flex-cols-1 sm:flex-row-1 gap-8   max-w-xl  w-full">
         
           <div className=" flex items-center gap-5 justify-center sm:justify-start bg-black-500 p-4 rounded-2xl border border-white/5 backdrop-blur-sm sm:bg-transparent sm:p-0 sm:border-0">
-            <div className="w-14 h-14  bg-teal-500/10 border rounded border-teal-500/20 flex items-center justify-center text-teal-400 ">
-             <BriefcaseBusiness />
-            </div>
+            <div className="w-14 h-14  bg-teal-300/60 border rounded-full border-teal-500/20 flex items-center justify-center text-teal-400 ">
+             <BriefcaseBusiness style={{color:'white' }} />           </div>
             <div className="text-left">
               <h3 className="text-2xl font-extrabold text-white ">25,850</h3>
               <p className="text-sm font-semibold text-gray-400">Jobs</p>
@@ -158,8 +263,8 @@ export default function Home() {
 
           {/* Stat 2: Candidates */}
           <div className="flex items-center gap-5 justify-center sm:justify-start bg-black-500  p-4 rounded-2xl border border-white/5 backdrop-blur-sm sm:bg-transparent sm:p-0 sm:border-0">
-            <div className="w-14 h-14  bg-teal-500/20 border rounded border-teal-500/20 flex items-center justify-center text-teal-400 shadow-inner">
-              <Users />
+            <div className="w-14 h-14  bg-teal-300/60 border rounded-full border-teal-500/20 flex items-center justify-center text-teal-400 shadow-inner">
+              <Users style={{color:'white' }}  />
             </div>
             <div className="text-left">
               <h3 className="text-2xl font-extrabold text-white tracking-tight">10,250</h3>
@@ -168,8 +273,8 @@ export default function Home() {
           </div>
 
           <div className="flex items-center gap-5  justify-center sm:justify-start bg-black-500  p-4 rounded-2xl border border-white/5 backdrop-blur-sm sm:bg-transparent sm:p-0 sm:border-0">
-            <div className="w-14 h-14  bg-teal-500/10 border rounded border-teal-500/20 flex items-center justify-center text-teal-400 shadow-inner">
-             <Building/>
+            <div className="w-14 h-14  bg-teal-300/60 border rounded-full border-teal-500/20 flex items-center justify-center text-teal-400 shadow-inner">
+             <Building style={{color:'white' }} />
             </div>
             <div className="text-left">
               <h3 className="text-2xl font-extrabold text-white tracking-tight">18,400</h3>
@@ -180,8 +285,8 @@ export default function Home() {
       </main>
 
       {/* Footer Brands */}
-      <footer className="relative z-10 w-full  border-t border-white/5 bg-black py-13">
-        <div className="max-w-7xl  mx-auto px-12 flex flex-wrap items-center justify-center md:justify-between gap-35 md:gap-35">
+      <footer className="relative z-10 w-full  border-t border-white/5 bg-black mt-12 py-12">
+        <div className="max-w-7xl  mx-auto px-12 flex flex-wrap items-center justify-center md:justify-between gap-30 md:gap-30">
          
           <div className="flex flex-wrap items-center justify-center gap-45">
             {/* Spotify */}

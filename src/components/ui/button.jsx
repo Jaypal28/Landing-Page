@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react-refresh/only-export-components */
 import * as React from "react"
 import { cva } from "class-variance-authority";
 import { Slot } from "radix-ui"
@@ -9,7 +11,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-teal-400 text-primary-foreground hover:bg-teal-600",
+        default: "bg-teal-600 text-primary-foreground hover:bg-teal-700",
         outline:
           "border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50",
         secondary:
@@ -19,8 +21,8 @@ const buttonVariants = cva(
         destructive:
           "bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/40",
         link: "text-primary underline-offset-4 hover:underline",
-        custom:"bg-blue-600 text-white w-full py-3 rounded-md mb-4 hover:bg-blue-700",
-        Sigoogle:"border border-slate-200 rounded-md flex-1 py-2 flex items-center justify-center gap-2 cursor-pointer  hover:bg-blue-400 text-slate-800 bg-white transition font-medium",
+        custom:"bg-blue-600 text-white w-full py-5 rounded-md mb-4 hover:bg-blue-700 mt-4",
+        Sigoogle:"border border-slate-200 rounded-md flex-1 py-5 flex items-center justify-center gap-2 cursor-pointer  hover:bg-blue-400 text-slate-800 bg-white transition font-medium",
         custom2:"w-full max-w-md bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition"
       },
       size: {

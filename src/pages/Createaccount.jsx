@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button} from '@/components/ui/button';
-
+import { Checkbox } from "@/components/ui/checkbox"
+import  { Input } from "@/components/ui/input"
 import ch from "../assets/ch.png";
 import { Link, useNavigate } from "react-router-dom";
 import { Briefcase,BriefcaseBusiness,Building2,Eye } from 'lucide-react';
@@ -48,51 +49,61 @@ return (
 
           
             <div className="flex gap-3 mb-4">
-                <Input id="Job"/>
-
-                <input
+                {/* <input
+                    type="text"
+                    id="Job"
+                    placeholder="Full Name"
+                    className="border border-slate-200 rounded-md w-1/2 p-2 bg-white text-black placeholder:text-gray-400"/> */}
+                  <Input type="text"
+                     placeholder="FullName" />
+                {/* <input
                     type="text"
                     placeholder="Username"
-                    className="border border-slate-200 rounded-md w-1/2 p-2 bg-white text-black placeholder:text-gray-400"/>
-
+                    className="border border-slate-200 rounded-md w-1/2 p-2 bg-white text-black placeholder:text-gray-400"/> */}
+                <Input type="text"
+                placeholder="UserName"/>
             </div>
 
        
-            <input
+
+            {/* <input
                  type="email"
                  placeholder="Email Address"
                  onChange={(e) => setEmail(e.target.value)}  
-                 className="border border-slate-200 rounded-md w-full p-2 mb-4 bg-white text-black placeholder:text-gray-400"/>
+                 className="border border-slate-200 rounded-md w-full p-2 mb-4 bg-white text-black placeholder:text-gray-400"/> */}
+             <Input   type="email"
+                 placeholder="Email Address"
+                 onChange={(e) => setEmail(e.target.value)} />
+ <div className="py-4">
 
-          
-             <div className="flex items-center border border-slate-200 rounded-md px-3 mb-4 bg-white">
-
-                 <input
-                     type={showPassword ? "text" : "password"}
-                     placeholder="Password"
-                     className="w-full p-2 outline-none bg-white text-black placeholder:text-gray-400"/>
-                     <Eye className="cursor-pointer text-slate-500" onClick={() => setShowPassword(!showPassword)} style={{width:"16px", height:"16px"  }} />
+                 <Input
+                     type="password"
+                     placeholder="Confirm Password"
+                     />
+                 
 
              </div>
+              
+                
 
              
-             <div className="flex items-center border border-slate-200 rounded-md px-3 mb-4 bg-white">
+             <div>
 
-                 <input
-                     type={showConfirmPassword ? "text" : "password"}
+                 <Input
+                     type= "password"
                      placeholder="Confirm Password"
-                     className="w-full p-2 outline-none bg-white text-black placeholder:text-gray-400"/>
+                   />
         
-                <Eye className="cursor-pointer text-slate-500" onClick={() => setShowConfirmPassword(!showConfirmPassword)}  style={{width:"16px", height:"16px"  }} />
-             
+                
+                 
 
              </div>
 
            
-             <div className="mb-4">
+             <div className="py-3">
 
-                 <label className="text-sm">
-                     <input type="checkbox"/>
+                 <label className="text-sm flex">
+                     <Checkbox/>
                      I agree to the
                      <Link to="#" className="text-blue-500">
                          Terms of Service
@@ -111,10 +122,10 @@ return (
             <p className="text-center text-gray-500 mb-4">or</p>
 
            
-             <div className="flex   md:flex-col sm:flex-row gap-3">
+             <div className="flex  lg:flex-row md:flex-col sm:flex-row gap-3">
 
                  <Button
-                   variant= 'Sigoogle'>
+                   variant= 'Sigoogle' >
 
                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                          <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
@@ -155,11 +166,11 @@ return (
   
         <div className="absolute bottom-48 left-20 text-white z-10">
 
-            <h1 className="text-4xl font-samibold">
+            <h1 className="text-4xl font-semibold">
                 Over 1,75,324 candidates
             </h1>
 
-            <p className="text-4xl mt-3 font-samibold">
+            <p className="text-4xl mt-3 font-semibold">
                waiting for good employees.
             </p>
 

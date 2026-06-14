@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { Checkbox } from "@/components/ui/checkbox"
+import  { Input } from "@/components/ui/input"
 import { Link, useNavigate } from 'react-router-dom';
-import { Briefcase, Building, Eye, Building2, BriefcaseBusiness } from 'lucide-react';
+import { Briefcase, Eye, Building2, BriefcaseBusiness } from 'lucide-react';
 import ch from '../assets/ch.png';
 import { Button } from '@/components/ui/button';
 
@@ -13,9 +15,9 @@ export default function Signin() {
 <div className="flex min-h-screen">  
     <div className="w-1/2 p-10 flex items-center justify-center bg-white text-slate-900">
         <div className="w-full max-w-md">           
-            <div className="absolute top-10 justify-between flex items-center gap-2">
+            <div className="mb-12">
                 <div className="flex items-center gap-2">
-                <Briefcase style={{ width: '24px', height: '24px', color: 'blue' }} />
+                    <Briefcase style={{ width: '24px', height: '24px', color: 'blue' }} />
                     <span className="text-black font-bold text-xl">MyJob</span>
                 </div>
             </div>
@@ -32,26 +34,26 @@ export default function Signin() {
             </div>
 
           
-            <input
+            <Input
                 type="email"
                 placeholder="Email Address"
-                className="border border-slate-200 rounded-md w-full p-2 mb-4 bg-white text-black placeholder:text-gray-400"/>
+              />
 
           
-            <div className="flex items-center border border-slate-200 rounded-md px-3 mb-4 bg-white">
+            <div className="flex items-center  py-3 mb-4">
 
-                <input
-                    type={showPassword ? "text" : "password"}
-                    placeholder="Password"
-                    className="w-full p-2 outline-none bg-white text-black placeholder:text-gray-400"/>
-             <Eye onClick={() => setShowPassword(!showPassword)} style={{width:'12' ,height:'12' ,color:'gray'}}/>       
+                <Input
+                    type= "password"
+                    placeholder="Password" />
+                  
+               
             </div>
 
             
       
             <div className="mb-4">
-                <label className="text-sm">
-                    <input type="checkbox"/>
+                <label className="text-sm flex ">
+                  <Checkbox style={{color:'black', border:'7'}}/>
                     Remember me
                 </label>
                   <label className="text-sm float-right">  
@@ -95,30 +97,30 @@ export default function Signin() {
     </div>
 
     
-    <div className=" w-1/2 relative overflow-hidden">
+    <div className=" w-1/2 relative overflow">
         <img
             src={ch}
             alt="Checkerboard"
             className="absolute inset-0 w-full h-full object-cover"/>
         <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(4, 26, 60, 0.5) 0%, rgba(4, 26, 60, 1) 100%)" }}>
           </div>    
-        <div className="absolute top-0 -left-9 h-full w-16 bg-white -skew-x-3 origin-left"></div>
+        <div className="absolute top-0 -left-9 h-full w-16 bg-white -skew-x-3 origin-left "></div>
 
         
         <div className="absolute bottom-48 left-22 text-white z-10">
 
-            <h1 className="text-4xl font-samibold">
+            <h1 className="text-4xl font-semibold">
                 Find your dream job.
             </h1>
-            <p className="text-4xl font-samibold">
-               waiting for good employess.
+            <p className="text-4xl font-semibold">
+               waiting for good employees.
             </p>
         </div>
 
     
         <div className="absolute bottom-12 left-22 flex gap-25 text-white z-10">
             <div className="text-center">
-                <div className="bg-white/15 p-3 rounded-lg mb-4">
+                <div className="bg-white/15 p-3 rounded-lg mb-4 flex items-center justify-center">
                    <BriefcaseBusiness/>
                 </div>
 
@@ -126,7 +128,7 @@ export default function Signin() {
                 <p className="text-xs">Live Jobs</p>
             </div>
             <div className="text-center">
-                <div className="bg-white/15 p-3 rounded-lg mb-4">
+                <div className="bg-white/15 p-3 rounded-lg mb-4 flex items-center justify-center">
                  <Building2 />
                 </div>
                 <h3 className="font-semibold">97,354</h3>
@@ -134,8 +136,8 @@ export default function Signin() {
             </div>
 
             <div className="text-center">
-                <div className="bg-white/15 p-3 rounded-lg mb-4">
-              < Briefcase/>
+                <div className="bg-white/15 p-3 rounded-lg mb-4 flex items-center justify-center">
+                  <Briefcase/>
                 </div>
 
                 <h3 className="font-semibold">7,532</h3>
