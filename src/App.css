@@ -1,3 +1,11 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+ 
+  
+   
+}
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;
@@ -16,6 +24,8 @@
     outline-offset: 2px;
   }
 }
+
+
 
 .hero {
   position: relative;

@@ -1,18 +1,19 @@
-// import Home from './components/Home';
+import Home from './components/Home';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css'
-// import { Routes, Route, BrowserRouter } from 'react-router-dom';
-// import Resetpassword from './pages/Resetpassword';
-// import Createaccount from './pages/Createaccount';
-// import Forgetpassword from './pages/Forgetpassword';
-// import Verification from './pages/Verification';
-// import Signin from "./pages/Signin";
-import Job from "./pages/Job";
+
+import Signin from './pages/Signin';
+import Createaccount from './pages/Createaccount';
+import Forgetpassword from './pages/Forgetpassword';
+import Resetpassword from './pages/Resetpassword';
+import Verification from './pages/Verification';
+import Jobs from './pages/Jobs';
+import Jobdetial from './pages/Jobdetial';
 
 function App() {
   return (
-    <>
-       
-   {/* <BrowserRouter>
+    <>     
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home/>} /> 
           <Route path="/Signin" element={<Signin />} />
@@ -20,11 +21,10 @@ function App() {
         <Route path="/Forgetpassword" element={<Forgetpassword />} />
         <Route path="/Resetpassword" element={<Resetpassword />} />
         <Route path="/Verification" element={<Verification />} />
-      </Routes>
-    </BrowserRouter> */}
-
-    <Job/>
-  
+        <Route path ="/Jobs"  element={<Jobs/>}/>
+        < Route path="/Jobdetial" element={<Jobdetial/>}/>    
+      </Routes>  
+    </BrowserRouter>  
     </>
   )
 }

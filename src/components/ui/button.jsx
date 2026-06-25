@@ -2,7 +2,7 @@
 /* eslint-disable react-refresh/only-export-components */
 import * as React from "react"
 import { cva } from "class-variance-authority";
-import { Slot } from "radix-ui"
+import { Slot } from "radix-ui";
 
 import { cn } from "@/lib/utils"
 
@@ -13,7 +13,7 @@ const buttonVariants = cva(
       variant: {
         default: "bg-teal-600 text-primary-foreground hover:bg-teal-700",
         outline:
-          "border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50",
+          "  text-white hover:bg-teal-500  aria-expanded:bg-muted aria-expanded:text-white dark:border-input dark:bg-input/30 dark:hover:bg-input/50",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-[color-mix(in_oklch,var(--secondary),var(--foreground)_5%)] aria-expanded:bg-secondary aria-expanded:text-secondary-foreground",
         ghost:
@@ -23,7 +23,18 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         custom:"bg-blue-600 text-white w-full py-5 rounded-md mb-4 hover:bg-blue-700 mt-4",
         Sigoogle:"border border-slate-200 rounded-md flex-1 py-5 flex items-center justify-center gap-2 cursor-pointer  hover:bg-blue-400 text-slate-800 bg-white transition font-medium",
-        custom2:"w-full max-w-md bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition"
+        custom2:"w-full max-w-md bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition",
+        JobBTN:"absolute top-5 right-5 p-2 bg-slate-50 border border-slate-100 rounded-full text-slate-400 hover:text-slate-500 transition-colors cursor-pointer",
+         JobDetial:"w-full md:w-auto px-5 py-2.5 bg-[#0d9488] hover:bg-[#0f766e] text-white font-semibold rounded-lg text-sm transition-colors cursor-pointer text-center",
+         smrt:"bg-teal-600  text-white m-5  ",
+         Subscribe:"w-full sm:w-auto bg-teal-500 hover:bg-teal-600 text-white font-semibold px-6 py-2 rounded transition-colors",
+         srdt:"bg-slate-50 ",
+          jay:"w-8 h-8 rounded-lg bg-teal-600 text-white flex items-center justify-center font-semibold text-sm cursor-pointer shadow-sm",
+          pal:"w-8 h-8 rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 flex items-center justify-center font-semibold text-sm cursor-pointer transition-colors shadow-sm",
+          him:"px-3 h-8 rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 flex items-center justify-center font-semibold text-sm cursor-pointer transition-colors shadow-sm gap-1 ml-2",
+          her:"w-full mt-4 py-2.5 bg-teal-600 hover:bg-teal-800 text-white rounded-xl text-xs font-bold transition-all shadow-sm cursor-pointer hover:shadow",
+          joy:"bg-teal-600 hover:bg-teal-800 text-white px-3.5 py-1.5 rounded-lg text-xs font-bold transition-colors cursor-pointer shadow-sm",
+          
       },
       size: {
         default:
@@ -51,6 +62,7 @@ function Button({
   variant = "default",
   size = "default",
   asChild = false,
+
   ...props
 }) {
   const Comp = asChild ? Slot.Root : "button"
