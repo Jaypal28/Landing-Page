@@ -47,7 +47,7 @@ export default function Footer() {
             </p>
 
           <Input type="email"
-
+            className='rounded border border-slate-300 overflow-hidden'
           placeholder="Email Address">
           </Input>
             <Button variant="custom" className="bg-teal-600 hover:bg-teal-700">

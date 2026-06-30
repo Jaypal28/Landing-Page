@@ -1,16 +1,15 @@
-import React from 'react';
 import { User2, Clock5, BriefcaseBusiness, Calendar, GraduationCap, Wallet, MapPin } from 'lucide-react';
 import mapImage from '../assets/gole map.png';
 
 export default function JobOverviewCard({ overviewData }) {
   const defaultSpecs = [
-    { icon: <User2 className="w-5 h-5 text-teal-655" />, label: "Job Title", value: "Corporate Solutions Executive" },
-    { icon: <Clock5 className="w-5 h-5 text-teal-655" />, label: "Join Type", value: "Full Time" },
-    { icon: <BriefcaseBusiness className="w-5 h-5 text-teal-655" />, label: "Category", value: "Commerce" },
-    { icon: <Calendar className="w-5 h-5 text-teal-655" />, label: "Experience", value: "5 Years" },
-    { icon: <GraduationCap className="w-5 h-5 text-teal-655" />, label: "Degree", value: "Master" },
-    { icon: <Wallet className="w-5 h-5 text-teal-655" />, label: "Offered Salary", value: "$40800-$42200" },
-    { icon: <MapPin className="w-5 h-5 text-teal-655" />, label: "Location", value: "New-York, USA" }
+    { icon: <User2 className="w-5 h-5 text-teal-600" />, label: "Job Title", value: "Corporate Solutions Executive" },
+    { icon: <Clock5 className="w-5 h-5 text-teal-600" />, label: "Join Type", value: "Full Time" },
+    { icon: <BriefcaseBusiness className="w-5 h-5 text-teal-600" />, label: "Category", value: "Commerce" },
+    { icon: <Calendar className="w-5 h-5 text-teal-600" />, label: "Experience", value: "5 Years" },
+    { icon: <GraduationCap className="w-5 h-5 text-teal-600" />, label: "Degree", value: "Master" },
+    { icon: <Wallet className="w-5 h-5 text-teal-600" />, label: "Offered Salary", value: "$40800-$42200" },
+    { icon: <MapPin className="w-5 h-5 text-teal-600" />, label: "Location", value: "New-York, USA" }
   ];
 
   const specs = overviewData || defaultSpecs;

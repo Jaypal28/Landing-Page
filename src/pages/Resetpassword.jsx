@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
-import { BriefcaseBusiness } from "lucide-react";
 import { Button } from '@/components/ui/button';
 import { Input } from "@/components/ui/input";
-import AuthSidebar from '../components/AuthSidebar';
+import Header from "@/components/Header";
+
 
 export default function Resetpassword() {
   return (
-    <>
-      <div className="flex flex-col lg:flex-row min-h-screen">
-        <div className="w-full lg:w-1/2 px-6 py-12 sm:p-10 md:p-16 flex items-center justify-center bg-white text-slate-900">
-          <div className="w-full max-w-md">
+    <div className="w-full min-h-screen overflow-x-hidden bg-black text-white font-sans flex flex-col justify-between">
+      <Header />
+      <div className="flex-1 flex items-center justify-center bg-white px-4 py-8 sm:px-6 sm:py-10 md:px-10 md:py-12 lg:px-16 lg:py-16 text-slate-900">
+    <div className="w-full max-w-md">
             <div className="flex items-center gap-2 mb-8">
-               <BriefcaseBusiness strokeWidth={1.5} className="w-6 h-6 text-blue-600" />
+              
                <span className="text-black font-bold text-xl">MyJob</span>
             </div>
 
@@ -39,8 +39,7 @@ export default function Resetpassword() {
 
             <Button
                 onClick={() => { window.location.href = "/Signin"; }}
-                variant="custom2"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-6 rounded-lg transition"
+                variant="custom3"         
             >
                 Reset Password 
             </Button>
@@ -54,13 +53,7 @@ export default function Resetpassword() {
                 </p>
             </div>
           </div>
-        </div>
-
-        <AuthSidebar 
-          title="Reset your credentials" 
-          subtitle="to keep your profile safe." 
-        />
-      </div>
-    </>
+        </div>      
+    </div>
   );
 }

@@ -27,7 +27,7 @@ export default function NewsBlog() {
           {/* Blog Card 1 */}
           <div className="group flex flex-col gap-3">
             <div className="relative overflow-hidden rounded-3xl aspect-16/10 border border-slate-100/50 shadow-sm">
-              <span className="absolute top-4 left-4 z-10 bg-[#0d9488] text-white font-semibold text-xs px-3.5 py-1.5 rounded-lg shadow-sm">
+              <span className="absolute top-4 left-4 z-10 bg-teal-600 text-white font-semibold text-xs px-3.5 py-1.5 rounded-lg shadow-sm">
                 News
               </span>
               <img 
@@ -39,7 +39,7 @@ export default function NewsBlog() {
             
             <div className="text-left mt-2 px-1">
               <p className="text-slate-400 text-xs sm:text-sm font-medium">30 March 2024</p>
-              <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 mt-2.5 leading-snug group-hover:text-[#0d9488] transition-colors duration-200">
+              <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 mt-2.5 leading-snug group-hover:text-teal-700 transition-colors duration-200">
                 <Link to="/">Revitalizing Workplace Morale: Innovative Strategies for Boosting Employee Engagement In 2024</Link>
               </h3>
             </div>
@@ -48,7 +48,7 @@ export default function NewsBlog() {
           {/* Blog Card 2 */}
           <div className="group flex flex-col gap-3">
             <div className="relative overflow-hidden rounded-3xl aspect-16/10 border border-slate-100/50 shadow-sm">
-              <span className="absolute top-4 left-4 z-10 bg-[#0d9488] text-white font-semibold text-xs px-3.5 py-1.5 rounded-lg shadow-sm">
+              <span className="absolute top-4 left-4 z-10 bg-teal-600 text-white font-semibold text-xs px-3.5 py-1.5 rounded-lg shadow-sm">
                 Blog
               </span>
               <img 
@@ -60,7 +60,7 @@ export default function NewsBlog() {
             
             <div className="text-left mt-2 px-1">
               <p className="text-slate-400 text-xs sm:text-sm font-medium">30 March 2024</p>
-              <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 mt-2.5 leading-snug group-hover:text-[#0d9488] transition-colors duration-200">
+              <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 mt-2.5 leading-snug group-hover:text-teal-700 transition-colors duration-200">
                 <Link to="/">Top Six Most Common Job Interview Mistakes and How to Avoid Them Easily</Link>
               </h3>
             </div>

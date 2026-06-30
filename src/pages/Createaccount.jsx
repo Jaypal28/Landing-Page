@@ -2,21 +2,25 @@ import { Button} from '@/components/ui/button';
 import { Checkbox } from "@/components/ui/checkbox"
 import { Input } from "@/components/ui/input"
 import { Link } from "react-router-dom";
-import { Briefcase } from 'lucide-react';
 import AuthSidebar from '../components/AuthSidebar';
+import Header from '@/components/Header';
 
-export default function Createaccount(){
+export default function Createaccount(){ 
+
   return (
-    <>
-      <div className="flex flex-col lg:flex-row min-h-screen">
+    <div className="w-full min-h-screen overflow-x-hidden bg-black text-white font-sans flex flex-col justify-between">
+      <Header />
+      <div className="flex-1 flex flex-col lg:flex-row">
+        
+        <div className="w-full lg:w-2/3 min-h-screen lg:min-h-0 p-6 sm:p-10 md:p-16 flex items-center justify-center bg-white text-slate-900">
 
-        <div className="w-full lg:w-1/2 p-6 sm:p-10 md:p-16 flex items-center justify-center bg-white text-slate-900">
 
+          
           <div className="w-full max-w-md">
-
-            <div className="mb-12">
+               
+            <div className="mb-12">   
               <div className="flex items-center gap-2">
-                <Briefcase strokeWidth={1.5} className="w-6 h-6 text-blue-600" />
+           
                 <span className="text-black font-bold text-xl">MyJob</span>
               </div>
             </div>
@@ -62,7 +66,7 @@ export default function Createaccount(){
             <div className="py-3">
               <label className="text-sm flex items-center cursor-pointer">
                 <Checkbox id="terms-agree-box" />
-                <span className="ml-2 text-slate-650">I agree to the</span>
+                <span className="ml-2 text-slate-600">I agree to the</span>
                 <Link to="#" className="text-blue-500 ml-1 hover:underline">
                   Terms of Service
                 </Link>
@@ -74,7 +78,7 @@ export default function Createaccount(){
                 const emailVal = document.getElementById("email-input-field")?.value || "";
                 window.location.href = `/Verification?email=${encodeURIComponent(emailVal)}`;
               }}
-              variant="custom"
+              variant="custom3"
             >
               Create Account
             </Button>
@@ -102,13 +106,19 @@ export default function Createaccount(){
 
           </div>
         </div>
+  
+       
+  
 
-        <AuthSidebar 
+          <AuthSidebar 
           title="Over 1,75,324 candidates" 
           subtitle="waiting for good employees." 
+          
         />
+        
+
 
       </div> 
-    </>  
+    </div>  
   );
 }

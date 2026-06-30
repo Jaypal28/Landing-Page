@@ -9,6 +9,8 @@ import Resetpassword from './pages/Resetpassword';
 import Verification from './pages/Verification';
 import Jobs from './pages/Jobs';
 import Jobdetial from './pages/Jobdetial';
+import Contact from './pages/Contact';
+import AboutUs from './pages/AboutUs';
 
 function App() {
   return (
@@ -22,7 +24,9 @@ function App() {
         <Route path="/Resetpassword" element={<Resetpassword />} />
         <Route path="/Verification" element={<Verification />} />
         <Route path ="/Jobs"  element={<Jobs/>}/>
-        < Route path="/Jobdetial" element={<Jobdetial/>}/>    
+        <Route path="/Jobdetial" element={<Jobdetial/>}/>    
+        <Route path="/Contact" element={<Contact/>}/>    
+        <Route path="/AboutUs" element={<AboutUs/>}/>    
       </Routes>  
     </BrowserRouter>  
     </>

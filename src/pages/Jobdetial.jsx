@@ -1,7 +1,8 @@
+import { useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/sections/Footer";
 import PageBackground from "../components/PageBackground";
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 import { 
   BriefcaseBusiness, Clock5, Wallet,MapPin,CircleCheck,  ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -10,6 +11,12 @@ import JobOverviewCard from "../components/JobOverviewCard";
 import SendMessageForm from "../components/SendMessageForm";
 
 export default function Jobdetial() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [location]);
+
   return (
     <div className='w-full min-h-screen overflow-x-hidden bg-black text-white font-sans flex flex-col justify-between'>
       <PageBackground />
@@ -26,20 +33,20 @@ export default function Jobdetial() {
           
           {/* Back Link */}
           <div className="w-full mb-6 flex">
-            <button 
-              onClick={() => { window.location.href = "/Jobs"; }}
+            <Link 
+              to="/Jobs"
               className="flex items-center gap-2 text-slate-600 hover:text-teal-600 font-semibold text-sm transition-colors cursor-pointer"
             >
               <ArrowLeft className="w-4 h-4" />
               <span>Back to search</span>
-            </button>
+            </Link>
           </div>
 
           {/* Job Header Card */}
           <div className="w-full bg-white   p-6 sm:p-8 shadow-xs flex flex-col sm:flex-row justify-between sm:items-center gap-6 ">
             <div>
               <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight font-display">Corporate Solutions Executive</h1>
-              <p className="text-teal-650 text-sm mt-1.5 font-semibold">Loffler and Sons</p>
+              <p className="text-teal-600 text-sm mt-1.5 font-semibold">Loffler and Sons</p>
               
               <div className="flex flex-wrap gap-x-6 gap-y-2 mt-4 text-xs sm:text-sm text-slate-500 font-medium">
                 <div className="flex items-center gap-1.5">
@@ -94,47 +101,27 @@ export default function Jobdetial() {
                   <h3 className="text-lg font-bold text-slate-900 font-display">Key Responsibilities</h3>
                   <ul className="space-y-3 text-slate-600 text-sm leading-relaxed">
                     <li className="flex items-start gap-3">
-                      
-                      <span >
-                         <CircleCheck className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100 text-teal-500"/>
-                      </span>
+                      <CircleCheck className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100 text-teal-500"/>
                       <span>Et diam ut tempus duis nisl sed massa. Ornare varius faucibus nisi vitae cras ornare. Cras facilisis dignissim augue.</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span >
-                         <CircleCheck className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100 text-teal-500"/>
-                      </span>
+                      <CircleCheck className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100 text-teal-500"/>
                       <span>Cras facilisis dignissim augue lorem amet adipiscing varius fames mauris. Tortor amet porta proin in.</span>
                     </li>
                     <li className="flex items-start gap-3">
-                     <span >
-                         <CircleCheck className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100 text-teal-500"/>
-                      </span>
-                     
+                      <CircleCheck className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100 text-teal-500"/>
                       <span>Ornare varius faucibus nisi vitae cras ornare. Cras facilisis dignissim augue lorem amet adipiscing purus fames.</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100">
-                        <span >
-                         <CircleCheck className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100 text-teal-500"/>
-                      </span>
-                      </span>
+                      <CircleCheck className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100 text-teal-500"/>
                       <span>Tortor amet porta proin in. Orci imperdiet nisi dignissim pellentesque morbi vitae. Quisque tincidunt metus lectus porta.</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100">
-                        <span >
-                         <CircleCheck className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100 text-teal-500"/>
-                      </span>
-                      </span>
+                      <CircleCheck className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100 text-teal-500"/>
                       <span>Tortor amet porta proin in. Orci imperdiet nisi dignissim pellentesque morbi vitae. Quisque tincidunt metus lectus porta.</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100">
-                        <span >
-                         <CircleCheck className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100 text-teal-500"/>
-                      </span>
-                      </span>
+                      <CircleCheck className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100 text-teal-500"/>
                       <span>Tortor amet porta proin in. Orci imperdiet nisi dignissim pellentesque morbi vitae. Quisque tincidunt metus lectus porta.</span>
                     </li>
                   </ul>
@@ -143,45 +130,25 @@ export default function Jobdetial() {
                 {/* Professional Skills */}
                 <div className="space-y-4">
                   <h3 className="text-lg font-bold text-slate-900 font-display">Professional Skills</h3>
-                  <ul className="space-y-3 text-slate-650 text-sm leading-relaxed">
+                  <ul className="space-y-3 text-slate-600 text-sm leading-relaxed">
                     <li className="flex items-start gap-3">
-                      <span className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100">
-                        <span >
-                         <CircleCheck className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100 text-teal-500"/>
-                      </span>
-                      </span>
+                      <CircleCheck className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100 text-teal-500"/>
                       <span>Et diam ut tempus duis nisl sed massa. Ornare varius faucibus nisi vitae cras ornare.</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100">
-                      <span >
-                         <CircleCheck className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100 text-teal-500"/>
-                      </span>
-                      </span>
+                      <CircleCheck className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100 text-teal-500"/>
                       <span>Ornare varius faucibus nisi vitae cras ornare.</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100">
-                        <span >
-                         <CircleCheck className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100 text-teal-500"/>
-                      </span>
-                      </span>
+                      <CircleCheck className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100 text-teal-500"/>
                       <span>Tortor amet porta proin in. Orci imperdiet nisi dignissim pellentesque morbi vitae.</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100">
-                        <span >
-                         <CircleCheck className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100 text-teal-500"/>
-                      </span>
-                      </span>
+                      <CircleCheck className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100 text-teal-500"/>
                       <span>Tortor amet porta proin in. Orci imperdiet nisi dignissim pellentesque morbi vitae.</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100">
-                        <span >
-                         <CircleCheck className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100 text-teal-500"/>
-                      </span>
-                      </span>
+                      <CircleCheck className="w-5 h-5 rounded-full bg-teal-50 flex items-center justify-center shrink-0 mt-0.5 border border-teal-100 text-teal-500"/>
                       <span>Tortor amet porta proin in. Orci imperdiet nisi dignissim pellentesque morbi vitae.</span>
                     </li>
                   </ul>
@@ -203,14 +170,14 @@ export default function Jobdetial() {
                 <div className="flex items-center gap-5 pt-2">
                   <span className="text-slate-950 font-semibold text-sm">Share Job:</span>
                   <div className="flex gap-2.5">
-                    <Link To="#"  className="  flex items-center justify-center hover:bg-teal-650 transition-colors">
-                      <img src="\assets\facebook.png" alt="facebook" width="50" />
+                    <Link to="#"  className="  flex items-center justify-center hover:bg-teal-650 transition-colors">
+                      <img src="/assets/facebook.png" alt="facebook" width="50" />
                     </Link>
-                    <Link To="#"  className=" mt-2 flex items-center justify-center hover:bg-teal-650 transition-colors">
-                      <img src="\assets\twitter.png" alt="twitter" width="30" />
+                    <Link to="#"  className=" mt-2 flex items-center justify-center hover:bg-teal-650 transition-colors">
+                      <img src="/assets/twitter.png" alt="twitter" width="30" />
                     </Link>
-                    <Link To="#" className="flex items-center justify-center hover:bg-teal-650 transition-colors">
-                      <img src="\assets\Linkdin.png" alt="Linkdin" width="50" />
+                    <Link to="#" className="flex items-center justify-center hover:bg-teal-650 transition-colors">
+                      <img src="/assets/Linkdin.png" alt="Linkdin" width="50" />
                     </Link>
                   </div>
                 </div>

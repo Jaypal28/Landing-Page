@@ -1,4 +1,3 @@
-import React from 'react';
 import { User2, Mail, Phone, MessageSquare } from 'lucide-react';
 import { Button } from './ui/button';
 import {Input}    from './ui/input';

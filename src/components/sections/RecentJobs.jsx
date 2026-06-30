@@ -1,12 +1,12 @@
-import { BookmarkPlus, BriefcaseBusiness, Clock5, Wallet, MapPin, Flower, Component } from 'lucide-react';
+import { BookmarkPlus, BriefcaseBusiness, Clock5, Wallet, MapPin } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
 import Card from '../ui/card';
 
 export default function RecentJobs() {
   return (
-    <div className="w-full bg-white relative text-slate-900 font-sans sm:px-6 lg:px-1">
-      <div className=" max-5xl mx-auto ">
+    <div className="w-full bg-white relative text-slate-900 font-sans sm:px-6 lg:px-8">
+      <div className=" max-w-5xl mx-auto ">
         <h1 className="mt-4 px-8 p-4 text-3xl sm:text-4xl font-extrabold text-slate-900 ">
           Recent Jobs Available 
         </h1>       
@@ -17,7 +17,7 @@ export default function RecentJobs() {
           
           <Link 
             to="https://google.com" 
-            className="pr-3 text-teal-500 hover:text-teal-600 font-bold text-sm sm:text-base transition-colors duration-200"
+            className=" pr-3 text-teal-500 hover:text-teal-600 font-bold text-sm sm:text-base transition-colors duration-200"
           >
             View all
           </Link>
@@ -31,19 +31,19 @@ export default function RecentJobs() {
             <BookmarkPlus strokeWidth={1.5} className="w-5 h-5 text-gray-500 hover:text-teal-600 transition-colors" />
           </Button>
 
-          <div className="flex items-start gap-4 flex-1">
-            <div className="w-12 h-12 rounded-full flex items-center justify-center overflow-hidden shrink-0 border border-teal-100 shadow-sm">
-            <img src='\assets\Logo.png' alt='Logo'/>
+          <div className="flex items-start   flex-1 ">
+            <div className=" mt-7  w-12 h-12 rounded-full flex items-center justify-center overflow-hidden shrink-0 border border-teal-100 shadow-sm">
+            <img src='/assets/Logo.png' alt='Logo'/>
             </div>
 
-            <div className="flex-1 min-w-0">
-              <div className="mb-2">
-                <span className="inline-block bg-teal-50/50 border border-teal-100 text-teal-600 font-bold text-xs px-2.5 py-1 rounded-full">
+            <div className="flex-1 min-w-0 pl-6">
+              <div className="mb-2 ">
+                <span className="inline-block bg-teal-50/50 border border-teal-100 text-teal-600 font-bold text-xs px-2.5 py-1 rounded-full ">
                   10 min ago
                 </span>
               </div>
 
-              <h2 className="text-lg sm:text-xl font-bold text-slate-800 tracking-tight leading-snug">
+              <h2 className=" text-lg sm:text-xl font-bold text-slate-800 tracking-tight leading-snug">
                 Forward Security Director
               </h2>
               <p className="text-slate-500 text-sm font-medium mt-1">
@@ -72,8 +72,10 @@ export default function RecentJobs() {
           </div>
 
           <div className="mt-4 md:mt-0 pt-4 md:pt-0 border-t md:border-t-0 border-slate-100 flex items-center justify-end">
-            <Button variant="JobDetial">
-              Job Details
+            <Button asChild variant="JobDetial">
+              <Link to="/Jobdetial">
+                Job Details
+              </Link>
             </Button>
           </div>
         </Card>
@@ -85,8 +87,8 @@ export default function RecentJobs() {
           </Button>
 
           <div className="flex items-start gap-4 flex-1">
-            <div className="w-12 h-12 rounded-full flex items-center justify-center overflow-hidden shrink-0 border border-slate-200 shadow-sm">
-              <img src="\assets\Logo (1).png" alt="Logo" />
+            <div className="mt-6 w-12 h-12 rounded-full flex items-center justify-center overflow-hidden shrink-0 border border-slate-200 shadow-sm">
+              <img src="/assets/Logo (1).png" alt="Logo" />
             </div>
 
             <div className="flex-1 min-w-0">
@@ -125,8 +127,10 @@ export default function RecentJobs() {
           </div>
 
           <div className="mt-4 md:mt-0 pt-4 md:pt-0 border-t md:border-t-0 border-slate-100 flex items-center justify-end">
-            <Button variant="JobDetial">
-              Job Details
+            <Button asChild variant="JobDetial">
+              <Link to="/Jobdetial">
+                Job Details
+              </Link>
             </Button>
           </div>
         </Card>
@@ -138,13 +142,13 @@ export default function RecentJobs() {
           </Button>
 
           <div className="flex items-start gap-4 flex-1">
-            <div className="w-12 h-12 rounded-full  flex items-center justify-center overflow-hidden shrink-0 border border-teal-100 shadow-sm">
-            <img src="assets\Logo (2).png" alt="logo2" />
+            <div className=" mt-6 w-12 h-12 rounded-full  flex items-center justify-center overflow-hidden shrink-0 border border-teal-100 shadow-sm">
+            <img src="/assets/Logo (2).png" alt="logo2" />
             </div>
 
             <div className="flex-1 min-w-0">
               <div className="mb-2">
-                <span className="inline-block bg-teal-50 border border-teal-100 text-teal-850 font-bold text-xs px-2.5 py-1 rounded-full">
+                <span className="inline-block bg-teal-50 border border-teal-100 text-teal-800 font-bold text-xs px-2.5 py-1 rounded-full">
                   15 min ago
                 </span>
               </div>
@@ -178,8 +182,10 @@ export default function RecentJobs() {
           </div>
 
           <div className="mt-4 md:mt-0 pt-4 md:pt-0 border-t md:border-t-0 border-slate-100 flex items-center justify-end">
-            <Button variant="JobDetial">
-              Job Details
+            <Button asChild variant="JobDetial">
+              <Link to="/Jobdetial">
+                Job Details
+              </Link>
             </Button>
           </div>
         </Card>
@@ -191,8 +197,8 @@ export default function RecentJobs() {
           </Button>
 
           <div className="flex items-start gap-4 flex-1">
-            <div className="w-12 h-12 rounded-full  flex items-center justify-center overflow-hidden shrink-0 border border-teal-100 shadow-sm">
-             <img src="\assets\Logo (3).png" alt="logo3" />
+            <div className=" mt-6 w-12 h-12 rounded-full  flex items-center justify-center overflow-hidden shrink-0 border border-teal-100 shadow-sm">
+             <img src="/assets/Logo (3).png" alt="logo3" />
             </div>
 
             <div className="flex-1 min-w-0">
@@ -231,8 +237,10 @@ export default function RecentJobs() {
           </div>
 
           <div className="mt-4 md:mt-0 pt-4 md:pt-0 border-t md:border-t-0 border-slate-100 flex items-center justify-end">
-            <Button variant="JobDetial">
-              Job Details
+            <Button asChild variant="JobDetial">
+              <Link to="/Jobdetial">
+                Job Details
+              </Link>
             </Button>
           </div>
         </Card>
@@ -244,8 +252,8 @@ export default function RecentJobs() {
           </Button>
 
           <div className="flex items-start gap-4 flex-1">
-            <div className="w-12 h-12 rounded-full bg-teal-50 flex items-center justify-center overflow-hidden shrink-0 border border-teal-100 shadow-sm">
-              <img src="assets\Logo (4).png" alt="logo4"/>
+            <div className="mt-6 w-12 h-12 rounded-full bg-teal-50 flex items-center justify-center overflow-hidden shrink-0 border border-teal-100 shadow-sm">
+              <img src="/assets/Logo (4).png" alt="logo4"/>
             </div>
 
             <div className="flex-1 min-w-0">
@@ -284,8 +292,10 @@ export default function RecentJobs() {
           </div>
 
           <div className="mt-4 md:mt-0 pt-4 md:pt-0 border-t md:border-t-0 border-slate-100 flex items-center justify-end">
-            <Button variant="JobDetial">
-              Job Details
+            <Button asChild variant="JobDetial">
+              <Link to="/Jobdetial">
+                Job Details
+              </Link>
             </Button>
           </div>
         </Card>

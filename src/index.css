@@ -171,27 +171,7 @@ body {
 }
 }
 
-/* Mobile Menu Toggle CSS Hacks */
-#mobile-menu-toggle:checked ~ header .peer-checked-hide {
-  display: none !important;
-}
-#mobile-menu-toggle:checked ~ header .peer-checked-show {
-  display: block !important;
-}
-#mobile-menu-toggle:checked ~ header .mobile-menu-dropdown {
-  display: flex !important;
-}
 
-/* Jobs Categories Show More/Less CSS Hacks */
-#toggle-more-categories:checked ~ div .category-item-extra {
-  display: flex !important;
-}
-#toggle-more-categories:checked ~ label .show-more-text {
-  display: none !important;
-}
-#toggle-more-categories:checked ~ label .show-less-text {
-  display: inline !important;
-}
 
 /* Background image style without using style attribute */
 .header-bg-image {

@@ -1,10 +1,11 @@
-import React from 'react';
 import { BriefcaseBusiness, Building2 } from 'lucide-react';
 import ch from '../assets/ch.png';
 
 export default function AuthSidebar({ title, subtitle }) {
   return (
-    <div className="w-full lg:w-1/2 relative overflow-hidden min-h-120 lg:min-h-screen bg-slate-950 py-16 px-6 sm:px-12 lg:px-20 flex flex-col justify-end text-white select-none"> 
+    <div className="hidden lg:flex lg:w-1/2 relative min-h-screen bg-slate-950 py-16 px-6 sm:px-12 lg:px-20 flex-col justify-end text-white select-none">
+  {/* Right Side Content */}
+
       <img
         src={ch}
         alt="Checkerboard"

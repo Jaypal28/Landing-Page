@@ -12,14 +12,14 @@ import PageBackground from './PageBackground';
 
 export default function Home() {
   return (
-    <div className=" w-full min-h-screen overflow-x-hidden bg-black-222 text-white font-sans flex flex-col justify-between">
+    <div className=" w-full min-h-screen overflow-x-hidden bg-black-222 text-white font-sans flex flex-col  justify-between">
       <PageBackground />
       <Header/>
       <Main/>
      
-      <div className="z-10 w-full bg-black mt-7 py-7">
+      <div className="z-10 w-full bg-black mt-9 py-9">
         <div className="w-full px-6 sm:px-12">
-          <div className="w-full flex flex-col sm:flex-row items-center justify-between text-center sm:text-left gap-6">
+          <div className="w-full grid grid-cols-3 lg:grid-cols-5 gap-6  justify-between text-center sm:text-left">
             
             <div className="flex w-full sm:w-auto gap-2 justify-center sm:justify-start"> 
               <SpotifyLogo className="w-6 h-6 text-blue-100 hover:text-white" />

@@ -1,19 +1,19 @@
 import { Checkbox } from "@/components/ui/checkbox"
 import { Input } from "@/components/ui/input"
 import { Link } from 'react-router-dom';
-import { Briefcase } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import AuthSidebar from '../components/AuthSidebar';
+import Header from "@/components/Header";
 
 export default function Signin() {
   return (
-    <>
-      <div className="flex flex-col lg:flex-row min-h-screen">  
+    <div className="w-full min-h-screen overflow-x-hidden bg-black text-white font-sans flex flex-col justify-between">
+      <Header />
+      <div className="flex-1 flex flex-col lg:flex-row"> 
         <div className="w-full lg:w-1/2 p-6 sm:p-10 md:p-16 flex items-center justify-center bg-white text-slate-900">
             <div className="w-full max-w-md">           
                 <div className="mb-12">
                     <div className="flex items-center gap-2">
-                        <Briefcase strokeWidth={1.5} className="w-6 h-6 text-blue-600" />
                         <span className="text-black font-bold text-xl">MyJob</span>
                     </div>
                 </div>
@@ -43,7 +43,7 @@ export default function Signin() {
                 <div className="flex items-center justify-between mb-6">
                     <label className="text-sm flex items-center gap-2 cursor-pointer select-none">
                         <Checkbox id="remember-me-checkbox" />
-                        <span className="text-slate-650">Remember me</span>
+                        <span className="text-slate-600">Remember me</span>
                     </label>
                     <Link to="/Forgetpassword" className="text-sm text-blue-500 hover:underline">
                         Forgot Password?
@@ -52,7 +52,7 @@ export default function Signin() {
 
                 <Button
                     onClick={() => { window.location.href = "/"; }}
-                    variant='custom'
+                    variant='custom3'
                 >
                     Sign In 
                 </Button>
@@ -84,6 +84,6 @@ export default function Signin() {
           subtitle="waiting for good employees." 
         />
       </div>
-    </>
+    </div>
   )
 }

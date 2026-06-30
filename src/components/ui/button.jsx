@@ -22,7 +22,7 @@ const buttonVariants = cva(
           "bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/40",
         link: "text-primary underline-offset-4 hover:underline",
         custom:"bg-blue-600 text-white w-full py-5 rounded-md mb-4 hover:bg-blue-700 mt-4",
-        Sigoogle:"border border-slate-200 rounded-md flex-1 py-5 flex items-center justify-center gap-2 cursor-pointer  hover:bg-blue-400 text-slate-800 bg-white transition font-medium",
+        Sigoogle:"border border-slate-200 rounded-md flex-1 py-5 flex items-center justify-center gap-2 cursor-pointer  hover:bg-teal-400 text-slate-800 bg-white transition font-medium",
         custom2:"w-full max-w-md bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition",
         JobBTN:"absolute top-5 right-5 p-2 bg-slate-50 border border-slate-100 rounded-full text-slate-400 hover:text-slate-500 transition-colors cursor-pointer",
          JobDetial:"w-full md:w-auto px-5 py-2.5 bg-[#0d9488] hover:bg-[#0f766e] text-white font-semibold rounded-lg text-sm transition-colors cursor-pointer text-center",
@@ -34,6 +34,7 @@ const buttonVariants = cva(
           him:"px-3 h-8 rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 flex items-center justify-center font-semibold text-sm cursor-pointer transition-colors shadow-sm gap-1 ml-2",
           her:"w-full mt-4 py-2.5 bg-teal-600 hover:bg-teal-800 text-white rounded-xl text-xs font-bold transition-all shadow-sm cursor-pointer hover:shadow",
           joy:"bg-teal-600 hover:bg-teal-800 text-white px-3.5 py-1.5 rounded-lg text-xs font-bold transition-colors cursor-pointer shadow-sm",
+          custom3:"bg-teal-600 text-white w-full py-5 rounded-md mb-4 hover:bg-teal-700 mt-4",
           
       },
       size: {

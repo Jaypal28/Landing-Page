@@ -1,13 +1,14 @@
-import React from 'react';
 import { Card } from './ui/card';
 import { Button } from './ui/button';
-import { Bookmark, MapPin, Clock5, Wallet, BriefcaseBusiness, ShieldCheck, Palette, Network, Target, LineChart, Coins, Component } from 'lucide-react';
+import {Link} from 'react-router-dom';
+
+import { Bookmark, MapPin, Clock5, Wallet, BriefcaseBusiness, Target, Coins, Component } from 'lucide-react';
 
 const getJobIcon = (title) => {
-  if (title.includes("Security")) return <img src="\assets\Logo (1).png" alt="alcv" className="w-8 h-8  text-teal-600" />;
-  if (title.includes("Creative") || title.includes("Designer") || title.includes("Coordinator")) return <img src='\assets\Logo (3).png' alt='avf' className="w-8 h-8 text-indigo-600" />;
-  if (title.includes("Integration") || title.includes("Planner")) return <img src='\assets\Logo (4).png' alt='asd' className="w-8 h-8 text-orange-600" />;
-  if (title.includes("Intranet") || title.includes("Director")) return <img src='assets\Logo (5).png' alt='vbk' className="w-8 h-8 text-blue-600" />;
+  if (title.includes("Security")) return <img src="/assets/Logo (1).png" alt="alcv" className=" w-8 h-8  text-teal-600"  />;
+  if (title.includes("Creative") || title.includes("Designer") || title.includes("Coordinator")) return <img src="/assets/Logo (3).png" alt="avf" className="w-8 h-8 text-indigo-600" />;
+  if (title.includes("Integration") || title.includes("Planner")) return <img src="/assets/Logo (4).png" alt="asd" className="w-8 h-8 text-orange-600" />;
+  if (title.includes("Intranet") || title.includes("Director")) return <img src="/assets/Logo (5).png" alt="vbk" className="w-8 h-8 text-blue-600" />;
   if (title.includes("Tactics") || title.includes("Facilitator")) return <Target strokeWidth={1.5} className="w-6 h-6 text-rose-600" />;
   if (title.includes("Accounts") || title.includes("Consultant")) return <Coins strokeWidth={1.5} className="w-6 h-6 text-emerald-600" />;
   return <Component strokeWidth={1.5} className="w-6 h-6 text-teal-600" />;
@@ -44,9 +45,9 @@ export default function JobCard({ job, isBookmarked = false, onToggleBookmark })
         />
       </Button>
 
-      <div className='flex items-start gap-4 flex-1'>
+      <div className='flex items-start gap-7 flex-1'>
         {/* Logo Icon inside stylized circle */}
-        <div className={`w-12 h-12 rounded-full flex items-center justify-center overflow-hidden shrink-0 shadow-xs ${getIconBg(job.title)}`}>
+        <div className={`w-12 h-12 rounded-full flex items-center justify-center overflow-hidden shrink-0 shadow-xs mt-0 ${getIconBg(job.title)}`}>
           {getJobIcon(job.title)}
         </div>
 
@@ -59,11 +60,10 @@ export default function JobCard({ job, isBookmarked = false, onToggleBookmark })
           </div>
 
           {/* Title & Company */}
-          <h2 
-            className='text-lg sm:text-xl font-bold text-slate-900 tracking-tight leading-snug hover:text-teal-600 transition-colors cursor-pointer font-display' 
-            onClick={() => { window.location.href = '/Jobdetial'; }}
-          >
-            {job.title}
+          <h2 className='text-lg sm:text-xl font-bold text-slate-900 tracking-tight leading-snug hover:text-teal-600 transition-colors cursor-pointer font-display'>
+            <Link to="/Jobdetial">
+              {job.title}
+            </Link>
           </h2>
           <p className='text-slate-500 text-sm font-semibold mt-1'>
             {job.company}
@@ -72,19 +72,19 @@ export default function JobCard({ job, isBookmarked = false, onToggleBookmark })
           {/* Job Details Row */}
           <div className='flex flex-wrap gap-x-5 gap-y-2 mt-4 text-xs sm:text-sm text-slate-500 font-medium'>
             <div className='flex items-center gap-1.5'>
-              <BriefcaseBusiness strokeWidth={1.5} className='w-4 h-4 text-slate-450' />
+              <BriefcaseBusiness strokeWidth={1.5} className='w-4 h-4 text-slate-400' />
               <span>{job.category}</span>
             </div>
             <div className='flex items-center gap-1.5'>
-              <Clock5 strokeWidth={1.5} className='w-4 h-4 text-slate-450' />
+              <Clock5 strokeWidth={1.5} className='w-4 h-4 text-slate-400' />
               <span>{job.jobType}</span>
             </div>
             <div className='flex items-center gap-1.5'>
-              <Wallet strokeWidth={1.5} className='w-4 h-4 text-slate-450' />
+              <Wallet strokeWidth={1.5} className='w-4 h-4 text-slate-400' />
               <span>{job.salary}</span>
             </div>
             <div className='flex items-center gap-1.5'>
-              <MapPin strokeWidth={1.5} className='w-4 h-4 text-slate-450' />
+              <MapPin strokeWidth={1.5} className='w-4 h-4 text-slate-400' />
               <span>{job.location}</span>
             </div>
           </div>
@@ -94,11 +94,12 @@ export default function JobCard({ job, isBookmarked = false, onToggleBookmark })
       {/* Job Details Button */}
       <div className='mt-4 md:mt-0 pt-4 md:pt-0 border-t md:border-t-0 border-slate-100 flex items-center justify-end shrink-0'>
         <Button 
+          asChild
           variant='JobDetial' 
-          className='bg-teal-650 hover:bg-teal-700 text-white w-full md:w-auto font-semibold' 
-          onClick={() => { window.location.href = '/Jobdetial'; }}
         >
-          Job Details
+          <Link to="/Jobdetial">
+            Job Details
+          </Link>
         </Button>
       </div>
 

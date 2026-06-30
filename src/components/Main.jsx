@@ -16,7 +16,7 @@ export default function Main() {
     <main className="relative grow flex flex-col items-center justify-center px-6 py-16 text-center max-w-7xl mx-auto w-full">
       {/* Title */}
       <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white max-w-4xl font-display">
-        Find Your Dream Job <span className="text-teal-300">Today!</span>
+        Find Your Dream Job Today!
       </h1>
       
       {/* Subtitle */}
@@ -25,17 +25,17 @@ export default function Main() {
       </p>
 
       
-      <form className="mt-9 w-full max-w-4xl bg-white backdrop-blur-md rounded-2xl border border-white/10 flex flex-col md:flex-row items-center p-2 gap-2">         
-        <div className="w-full md:flex-1 flex items-center px-4 py-2 border-b border-white/5 md:border-b-0 md:border-r border-white/5 gap-2">
+      <form className="mt-9 w-full max-w-4xl bg-white backdrop-blur-md rounded-2xl border border-slate-200/80 flex flex-col md:flex-row items-center p-2 gap-2">         
+        <div className="w-full md:flex-1 flex items-center px-4 py-2 border-b border-slate-200 md:border-b-0 md:border-r gap-2">
           <Search strokeWidth={1.5} className="w-5 h-5 text-gray-400" />
-          <Input type="text" placeholder="Job Title or Company" className="w-full bg-transparent text-white border-none focus:ring-0 focus:ring-offset-0 focus-visible:ring-0" />
+          <Input type="text" placeholder="Job Title or Company" className="w-full bg-transparent text-slate-900 placeholder:text-slate-400 border-none focus:ring-0 focus:ring-offset-0 focus-visible:ring-0" />
         </div>
 
         {/* Select Location Dropdown */}
-        <div className="relative w-full md:w-56 flex items-center px-4 py-2 border-b border-white/5 md:border-b-0 md:border-r border-white/5 gap-2">
+        <div className="relative w-full md:w-56 flex items-center px-4 py-2 border-b border-slate-200 md:border-b-0 md:border-r gap-2">
           <MapPin strokeWidth={1.5} className="w-5 h-5 text-gray-400" />
           <Select>
-            <SelectTrigger className="w-full bg-transparent border-none text-white focus:ring-0 focus:ring-offset-0 focus-visible:ring-0">
+            <SelectTrigger className="w-full bg-transparent border-none text-slate-800 focus:ring-0 focus:ring-offset-0 focus-visible:ring-0">
               <SelectValue placeholder="Select Location" />
             </SelectTrigger>
             <SelectContent>
@@ -55,7 +55,7 @@ export default function Main() {
         <div className="relative w-full md:w-60 flex items-center px-4 py-2 gap-2">
           <TextCursorInput strokeWidth={1.5} className="w-5 h-5 text-gray-400" />
           <Select>
-            <SelectTrigger className="w-full bg-transparent border-none text-white focus:ring-0 focus:ring-offset-0 focus-visible:ring-0">
+            <SelectTrigger className="w-full bg-transparent border-none text-slate-800 focus:ring-0 focus:ring-offset-0 focus-visible:ring-0">
               <SelectValue placeholder="Select Category" />
             </SelectTrigger>
             <SelectContent>
@@ -78,11 +78,11 @@ export default function Main() {
       </form> 
        
       {/* Stats Section */}
-      <div className="mt-12 flex flex-col sm:flex-row gap-6 max-w-2xl w-full justify-between">
+      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:pl-32 gap-2 w-full">
       
-        <div className="flex items-center gap-4 justify-center sm:justify-start bg-white/5 sm:bg-transparent p-4 sm:p-0 rounded-2xl border border-white/5 sm:border-0 backdrop-blur-sm sm:backdrop-blur-none flex-1">
-          <div className="w-12 h-12 bg-teal-500/10 border border-teal-500/20 rounded-full flex items-center justify-center text-teal-400 shrink-0">
-            <BriefcaseBusiness strokeWidth={1.5} className="w-5 h-5 text-teal-400" />
+        <div className="flex  items-center gap-2 justify-center sm:justify-start bg-white/5 sm:bg-transparent p-4 sm:p-0 rounded-2xl border border-white/5 sm:border-0 backdrop-blur-sm sm:backdrop-blur-none flex-1">
+          <div className="w-12 h-12 bg-teal-600 border border-teal-500/20 rounded-full flex items-center justify-center text-teal-400 shrink-0">
+            <BriefcaseBusiness strokeWidth={1.5} className="w-5 h-5 text-white" />
           </div>
           <div className="text-left">
             <h3 className="text-2xl font-extrabold text-white">25,850</h3>
@@ -92,8 +92,8 @@ export default function Main() {
 
         {/* Stat 2: Candidates */}
         <div className="flex items-center gap-4 justify-center sm:justify-start bg-white/5 sm:bg-transparent p-4 sm:p-0 rounded-2xl border border-white/5 sm:border-0 backdrop-blur-sm sm:backdrop-blur-none flex-1">
-          <div className="w-12 h-12 bg-teal-500/10 border border-teal-500/20 rounded-full flex items-center justify-center text-teal-400 shrink-0">
-            <Users strokeWidth={1.5} className="w-5 h-5 text-teal-400" />
+          <div className="w-12 h-12 bg-teal-600 border border-teal-500/20 rounded-full flex items-center justify-center text-teal-400 shrink-0">
+            <Users strokeWidth={1.5} className="w-5 h-5 text-white" />
           </div>
           <div className="text-left">
             <h3 className="text-2xl font-extrabold text-white">10,250</h3>
@@ -103,8 +103,8 @@ export default function Main() {
 
         {/* Stat 3: Companies */}
         <div className="flex items-center gap-4 justify-center sm:justify-start bg-white/5 sm:bg-transparent p-4 sm:p-0 rounded-2xl border border-white/5 sm:border-0 backdrop-blur-sm sm:backdrop-blur-none flex-1">
-          <div className="w-12 h-12 bg-teal-500/10 border border-teal-500/20 rounded-full flex items-center justify-center text-teal-400 shrink-0">
-            <Building strokeWidth={1.5} className="w-5 h-5 text-teal-400" />
+          <div className="w-12 h-12 bg-teal-600 border border-teal-500/20 rounded-full flex items-center justify-center text-teal-400 shrink-0">
+            <Building strokeWidth={1.5} className="w-5 h-5  text-white" />
           </div>
           <div className="text-left">
             <h3 className="text-2xl font-extrabold text-white">18,400</h3>

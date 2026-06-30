@@ -1,5 +1,4 @@
 import {Card,CardAction,CardContent,CardDescription,CardFooter, CardHeader, CardTitle,} from "@/components/ui/card"
-import { defaultAllowedOrigins } from "vite"
 
 export default function Card1(){
   return(
